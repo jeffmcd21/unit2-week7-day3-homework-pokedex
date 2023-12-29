@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemon</title>
     <%- include("./cssjs.ejs") %>
 </head>
 <body>
     <h1>All the Pokemon</h1>
+    
+    <nav>
+        <a href="/pokemons/new">Create a Pokemon</a>
+    </nav>
+
     <ul>
     <% for (let i = 0; i < pokemons.length; i++){ %>
         <a href="/pokemons/<%= i %>"><li><%= pokemons[i].name %></li></a>
