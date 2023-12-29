@@ -10,8 +10,10 @@
     <h1>All the Pokemon</h1>
     <ul>
     <% for (let i = 0; i < pokemons.length; i++){ %>
-        <li><img src = <%= pokemons[i].img %>></li>
+        <a href="/pokemons/<%= i %>"><li><%= pokemons[i].name %></li></a>
+        <p><img src = <%= pokemons[i].img %>></p>
         <% } %>
     </ul>
+
 </body>
 </html>
