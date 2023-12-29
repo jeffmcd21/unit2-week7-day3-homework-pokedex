@@ -48,13 +48,34 @@ app.delete("/pokemons/:id", (req, res) => {
     res.redirect("/pokemons")
 })
 
+//EDIT ROUTE
+app.get("/pokemons/:id/edit", (req, res) => {
+    const id = req.params.id 
+    const pokemon = pokemons[id]
+    res.render("edit.ejs", {pokemon, id})
+})
+
+
+// UPDATE ROUTE
+app.put("/pokemons/:id", (req, res) => {
+    const id = req.params.id 
+    const body = req.body 
+    // if (body.stats === "on"){
+    //     body.stats = true
+    // } else {
+    //     body.stats = false
+    // }
+    pokemons[id] = body 
+    res.redirect("/pokemons")
+})
+
 
 // SHOW ROUTE
 app.get("/pokemons/:id", (req, res) => {
     const id = req.params.id 
     const pokemon = pokemons[id]
     // res.send(pokemon)
-    res.render("show.ejs", {pokemon})
+    res.render("show.ejs", {pokemon, id})
 })
 
 
