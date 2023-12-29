@@ -1,13 +1,13 @@
 
 const express = require("express")
-
+const pokemons = require("./models/pokemons.js")
 const app = express()
 
-const pokemons = ["poke1", "poke2", "poke3"]
 
-
+// INDEX ROUTE
 app.get("/pokemons", (req, res) => {
-    res.send(pokemons)
+    //res.send(pokemons)
+    res.render("index.ejs", {pokemons})
 })
 
 
@@ -15,7 +15,8 @@ app.get("/pokemons", (req, res) => {
 app.get("/pokemons/:id", (req, res) => {
     const id = req.params.id 
     const pokemon = pokemons[id]
-    res.send(pokemon)
+    //res.send(pokemon)
+    res.render("show.ejs", {pokemon})
 })
 
 
