@@ -3,6 +3,8 @@ const express = require("express")
 const pokemons = require("./models/pokemons.js")
 const app = express()
 
+// MIDDLEWARE
+app.use(express.static("public"))
 
 // INDEX ROUTE
 app.get("/pokemons", (req, res) => {

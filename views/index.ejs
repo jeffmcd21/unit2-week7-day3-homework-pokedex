@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include("./cssjs.ejs") %>
 </head>
 <body>
     <h1>All the Pokemon</h1>
     <ul>
     <% for (let i = 0; i < pokemons.length; i++){ %>
         <a href="/pokemons/<%= i %>"><li><%= pokemons[i].name %></li></a>
-        <p><img src = <%= pokemons[i].img %>></p>
+        <a href="/pokemons/<%= i %>"><img src = <%= pokemons[i].img %>></a>
         <% } %>
     </ul>
 
