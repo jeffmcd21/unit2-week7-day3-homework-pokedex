@@ -28,6 +28,10 @@ router.post("/", (req, res) => {
     // } else {
     //     body.stats = false
     // }
+    body.stats = {
+        speed: req.body.speed
+    }
+    console.log(body)
     pokemons.push(body)
     res.redirect("/pokemons")
 

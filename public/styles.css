@@ -1,6 +1,6 @@
 
 h1 {
-    color: orange;
+    color: rgb(255, 94, 0);
 }
 
 body {
@@ -8,28 +8,29 @@ body {
 }
 
 .pokes {
-    max-width: 50px;
-    display: grid;
-    /* display: flex; */
+    display: flex;
+    max-width: 100%;
+    padding: 10px;
     flex-wrap: wrap;
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-}
+  }
 
 .poke-container {
     padding: 5px;
-    background-color: orange;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: auto;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
-}
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #ffb2b2, -5px -5px 15px #ffb2b2;
+  }
+
 
 img {
+    width: 100px;
+    height: 100px;
     border-radius: 5px;
 }

@@ -14,16 +14,19 @@
         <a href="/pokemons/new">Create a Pokemon</a>
     </nav>
 
-    <div class="pokes">
     <!-- <ul> -->
-    
-    <% for (let i = 0; i < pokemons.length; i++){ %>
-        <a href="/pokemons/<%= i %>"><%= pokemons[i].name %></a>
-        <div class="poke-container"><a href="/pokemons/<%= i %>"><img src = <%= pokemons[i].img %>></a></div>
+        
+    <div class="pokes">
+        <% for (let i = 0; i < pokemons.length; i++){ %>
+        <div class="poke-container">
+            <a href="/pokemons/<%= i %>"><%= pokemons[i].name %></a>
+        <a href="/pokemons/<%= i %>"><img src = <%= pokemons[i].img %>></a>
     
         <form action="/pokemons/<%= i %>?_method=DELETE" method="post">
             <input type="submit" value="Delete"/>
         </form>
+        
+        </div>
         <% } %>
     <!-- </ul> -->
     </div>
