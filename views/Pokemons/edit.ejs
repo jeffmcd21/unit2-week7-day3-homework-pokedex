@@ -8,12 +8,28 @@
     <%- include("./cssjs.ejs") %>
   </head>
   <body>
-    <h1>Update Pokemon<%= pokemon.name %></h1>
-    <form action="/pokemons/<%= id %>?_method=PUT" method="post">
-        <label>Name: <input type="text" name="name" value="<%= pokemon.name %>"/></label>
-        <label>Type: <input type="text" name="type" value="<%= pokemon.type %>"/></label>
-        <!-- <label>Stats: <input type="text" name="stats" value="<%#= pokemon.stats %>"/></label> -->
-      <input type="submit" value="Update <%= pokemon.name %>" />
-    </form>
+    <h1>Update Pokemon <%= pokemon.name %></h1>
+    <h3><img src=<%= pokemon.img %>></h3>
+    <fieldset>
+      <legend>Make Some Changes Here</legend>
+      <div class="poke-input"></div>
+      <form action="/pokemons/<%= id %>?_method=PUT" method="post">
+          <label>Name: <input type="text" name="name" value="<%= pokemon.name %>"/></label><br>
+          <label>Type: <input type="text" name="type" value="<%= pokemon.type %>"/></label><br>
+          <label>Image: <input type="text" name="img" value="<%= pokemon.img %>"/></label><br>
+          <label>HP: <input type="number" name="hp" value="<%= pokemon.stats.hp %>"></label><br>
+          <label>Attack: <input type="number" name="attack" value="<%= pokemon.stats.attack %>"></label><br>
+          <label>Defense: <input type="number" name="defense" value="<%= pokemon.stats.defense %>"></label><br>
+          <label>Special Attack: <input type="number" name="spattack" value="<%= pokemon.stats.spattack %>"></label><br>
+          <label>Special Defense: <input type="number" name="spdefense" value="<%= pokemon.stats.spdefense %>"></label><br>
+          <label>Speed: <input type="number" name="speed" value="<%= pokemon.stats.speed %>"></label><br>
+          
+
+          <!-- <label>Stats: <input type="text" name="stats" value="<%#= pokemon.stats %>"/></label> -->
+        <input type="submit" value="Update <%= pokemon.name %>" />
+      </div>
+      </form>
+    </fieldset>
+
   </body>
 </html>

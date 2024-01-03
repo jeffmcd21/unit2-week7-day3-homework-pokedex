@@ -15,11 +15,33 @@
 
     <h3><img src=<%= pokemon.img %>></h3>
 
-    <% if (pokemon.stats.hp > 50) { %>
+        <div class="detailsInfo">
+            <p>Type: <% for (let i = 0; i < pokemon.type.length; i++) { %> <%= pokemon.type[i]%> <% } %></p>
+        </div>
+            <h5>HP</h5>
+            <div><%= pokemon.stats.hp %></div>
+          
+            <h5>Attack</h5>
+            <div><%= pokemon.stats.attack %></div>
+
+            <h5>Defense</h5>
+            <div><%= pokemon.stats.defense %></div>
+
+            <h5>Special Attack</h5>
+            <div><%= pokemon.stats.spattack %></div>
+          
+            <h5>Special Defense</h5>
+            <div><%= pokemon.stats.spdefense %></div>
+          
+            <h5>Speed</h5>
+            <div><%= pokemon.stats.speed %></div>
+          
+
+    <!-- <%# if (pokemon.stats.hp > 50) { %>
         <h4>"power on"</h4>
-    <% } else { %> 
+    <%# } else { %> 
         <h4>"power up"</h4>
-    <% } %>
+    <%# } %> -->
 
     
     <a href="/pokemons/<%= id %>/edit"><button>Edit Pokemon</button></a>
