@@ -6,35 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Show Page</title>
     <%- include("./cssjs.ejs") %>
+    
+    <a href="/pokemons/<%= id %>/edit"><button>Edit Pokemon</button></a>
+
+    <button><a href="/pokemons">Back to Main</a></button>
 </head>
 <body>
     <h1>The Pokemon Show</h1>
-    <a href="/pokemons">Back to Main</a>
     
     <h2><%= pokemon.name %></h2>
 
-    <h3><img src=<%= pokemon.img %>></h3>
+    <h3 class="show-img"><img src=<%= pokemon.img %>></h3>
 
         <div class="detailsInfo">
             <p>Type: <% for (let i = 0; i < pokemon.type.length; i++) { %> <%= pokemon.type[i]%> <% } %></p>
         </div>
-            <h5>HP</h5>
-            <div><%= pokemon.stats.hp %></div>
+    <div class="show-container">
+            <div class="HP"><h5>HP:<%= pokemon.stats.hp %></h5></div>
           
-            <h5>Attack</h5>
-            <div><%= pokemon.stats.attack %></div>
+            <div class="ATK"><h5>Attack:<%= pokemon.stats.attack %></h5></div>
 
-            <h5>Defense</h5>
-            <div><%= pokemon.stats.defense %></div>
+            <div class="DEF"><h5>Defense:<%= pokemon.stats.defense %></h5></div>
 
-            <h5>Special Attack</h5>
-            <div><%= pokemon.stats.spattack %></div>
+            <div class="SATK"><h5>Special Attack:<%= pokemon.stats.spattack %></h5></div>
           
-            <h5>Special Defense</h5>
-            <div><%= pokemon.stats.spdefense %></div>
-          
-            <h5>Speed</h5>
-            <div><%= pokemon.stats.speed %></div>
+            <div class="SDEF"><h5>Special Defense:<%= pokemon.stats.spdefense %></h5></div>
+            
+            <div class="SPD"><h5>Speed:<%= pokemon.stats.speed %></h5></div>
           
 
     <!-- <%# if (pokemon.stats.hp > 50) { %>
@@ -42,9 +40,7 @@
     <%# } else { %> 
         <h4>"power up"</h4>
     <%# } %> -->
-
-    
-    <a href="/pokemons/<%= id %>/edit"><button>Edit Pokemon</button></a>
+    </div>
 
 </body>
 </html>

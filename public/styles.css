@@ -83,10 +83,87 @@ fieldset {
     color: blue;
     box-sizing: border-box;
     text-align: center;
-    
-
 }
 
+.show-img {
+    background-color: black;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.show-container {
+    background-color: slategray;
+    margin: 1px;
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+    border-radius: 20px;
+}
+
+.HP {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.ATK {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.DEF {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.SATK {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.SDEF {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
+
+.SPD {
+    background-color: yellow;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #fefefe, -5px -5px 15px #fffefe;
+}
 /* 
 input[type="submit"] {
     font-family: 'Quicksand', sans-serif;
